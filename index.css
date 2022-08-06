@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    font-family: 'Nunito', sans-serif;
+}
+.container{
+    display: grid;
+    grid-template-columns: 250px 1fr 300px;
+    height: 100%;
+    overflow: hidden;
+}
+#menu{
+    background-image: url(images/menubackground1.jpg);
+}
+.brand-logo{
+    padding: 30px 30px;
+    text-align: center;
+}
+.brand-logo img{
+    width: 150px;
+    height: 150px;
+    margin-top: -20px;
+    border: 3px solid rgb(121, 121, 121);
+    background: white;
+    border-radius: 50%;
+
+}
+.menu-item a{
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px 30px;
+    margin: 12px 0;
+    color: rgb(129, 129, 129);
+    font-weight: 300;
+    background: white;
+    border-radius: 20px;
+    text-align: center;
+}
+.menu-item a:hover{
+    background: #dddcdc;
+    transform: scale(1.05);
+}
+#food-container{
+    background-image: url('images/background1.png');
+    overflow: scroll;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+#category-list{
+    padding-left: 10px;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    position: sticky;
+    top: 0;
+    background-image: url(images/headerbackground1.jpg);
+    z-index: 1;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.add-box{
+    padding: 8px 16px;
+    margin: 0 16px;
+    overflow: hidden;
+    color: black;
+    border: 2px solid white;
+    font-size: 18px;
+    font-weight: 800;
+    border-radius: 5px;
+}
+.packaging{
+    overflow: hidden; 
+    cursor: pointer;
+    accent-color: black;
+}
+.add-box i{
+    font-size: 20px;
+}
+.util i,.user i{
+    font-size: 18px;
+    margin: 0 16px;
+    border: 2px solid white;
+    padding: 8px 16px;
+    color: black;
+    border-radius: 20px;
+    cursor: pointer;
+    
+}
+.util i:active,.user i:active{
+    color: black;
+    background: white;
+}
+
+.food-items{
+    display:none;
+}
+#biryani,#chicken,#paneer,#vegetable,#chinese,#south-indian{
+    margin-top:40px;
+    font-family: 'Aclonica', sans-serif;
+}
+#category-name,.item-menu{
+    margin: 10px;
+    font-size: 35px;
+    color: coral;
+}
+#item-card{
+    width: 190px;
+    height: 220px;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 20px;
+    background: rgb(247, 228, 221);
+    cursor: pointer;
+    transition: 0.5s all ease-in-out;
+    font-family: 'Nunito', sans-serif;
+}
+#card-top{
+    display: flex;
+    margin: 5px 0;
+    justify-content: space-between;
+}
+#rating{
+    padding: 8px;
+    color: white;
+    font-size: 14px;
+    background: rgb(111, 234, 132);
+    border-radius: 14px;
+}
+.btn{
+    padding: 1px;
+    width: 50px;
+    text-align: center;
+    background: white;
+    cursor: pointer;
+    font-size: medium;
+    border-radius: 20px;
+    border: 2px solid rgb(214, 214, 214);
+}
+.toggle-heart{
+    background: orangered;
+    color: white;
+}
+#item-card img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+    border-radius: 40px;
+    margin-bottom: 15px;
+    transition: 0.5s all ease-in-out;
+}
+#item-card img:hover{
+    transform: scale(1.2);
+}
+#item-name{
+    margin: 5px 0;
+    font-weight :800;
+    color: darkslategray;
+    font-size: 18px;  
+}
+#item-price{
+    margin: 0;
+    color: rgb(2,27,27);
+    font-weight: 500;
+    font-size: 18px;
+}
+#cart{
+    background-image: url(images/menubackground1.jpg);
+    padding-right: 30px;
+    overflow-y: scroll;
+}
+.taste-header{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    position: sticky;
+    top: 0;
+}
+.item-menu{
+    margin: 0;
+    font-size: 30px;
+    margin-top: 40px;
+    color: rgb(235, 0, 0);
+    font-family: 'Aclonica', sans-serif;
+}
+
+.border{
+    width: 80px;
+    height: 4px;
+    margin: 3px 0;
+    margin-bottom: 30px;
+    border-radius: 2px;
+    background: rgb(10, 7, 6);
+}
+.list-card{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    background: #e7e1e1;
+    transition: 0.3s all ease-in-out;
+}
+.list-card:hover{
+    background: rgb(238, 238, 238);
+}
+.list-card:hover img{
+    transition: 0.5s all ease-in-out;
+    transform: scale(1.2);
+}
+.list-card img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.list-name{
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color:rgb(94,43,43);
+}
+#category-list{
+
+}
+.cart-toggle{
+    display: none;
+}
+#cart-page{
+    background: white;
+    margin: 40px 10px;
+    margin-right: 50px;
+    padding: 20px 30px;
+    padding-bottom: 30px;
+    position: relative;
+
+}
+#cart-title{
+    font-size: 35px;
+    margin: 0;
+    color: indianred;
+    font-family: 'Aclonica', sans-serif;
+}
+#cart-page table{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+#cart-page table thead td{
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+#m-total-amount{
+    display: none;
+}
+#cart-page table tbody td{
+    padding: 10px 0;
+    font-size: 20px;
+}
+#cart-page table tbody button{
+    outline:none;
+    border: none;
+    font-size: 16px;
+    background: none;
+    background: lightcoral;
+    color: white;
+    border-radius: 3px;
+    margin: 0 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 5px 8px;
+
+}
+#cart-page table tbody img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+    
+}
+#checkout{
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 5px;
+    background: white;
+    padding: 10px 20px;
+}
+
+#checkout p{
+    margin: 15px 0;
+    float: left;
+
+}
+#total-price,#total-item{
+    font-size: 25px;
+    color: indianred;
+}
+.cart-border{
+    width: 80px;
+    height: 4px;
+    margin: 3px 0;
+    margin-bottom: 30px;
+    border-radius: 2px;
+    background: rgb(10, 7, 6);
+}
+.cart-btn{
+    outline: none;
+    border: none;
+    background: crimson;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    bottom: 30px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+.cart-btn:hover{
+    color: crimson;
+    background:none;
+    border: 1px solid crimson;
+}
+#packaging-charge{
+    font-size: 20px;
+    color: limegreen;
+}
+#mobile-view{
+    display: none;
+}
+#biryani{
+    margin-top: 10px;
+}
+#m-total-amount{
+    display: none;
+}
+@media screen and (max-width: 800px)
+{
+    #container{
+        display: none;
+    }
+    #mobile-view{
+        display: grid;
+        grid-template-rows: 120px 1fr 50px;
+        height: 100%;
+        overflow: hidden;
+        width: 100vw;
+    }
+    .mobile-top{
+        padding: 5px 15px;
+        z-index: 1;
+        background: white;
+    }
+    .item-container{
+        overflow-y: scroll;
+    }
+    .logo-box,.top-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .m-packaging{
+        color: indianred;
+        border: 1px solid indianred;
+        padding: 5px;
+    }
+    .mobile-packaging{
+        accent-color: indianred;
+    }
+    .logo-box img{
+        width: 90px;
+        height: 70px;
+    }
+    .top-menu{
+        color: indianred;
+
+    }
+    .top-menu i{
+        font-size: 20px;
+        cursor: pointer;
+        padding: 12px 5px;
+        border-radius: 50%;
+    }
+    .m-cart-toggle{
+        color: white;
+        background: lightcoral;
+    }
+    .category-header{
+        display: flex;
+        width: 100%;
+        overflow-x: scroll;
+        position: sticky;
+        top: 0;
+        background: white;
+        z-index: 1;
+        border-bottom: 1px solid rgb(219,219,219);
+        margin: 0;
+    }
+    .toggle-category{
+        display: none;
+        position:relative;
+    }
+    .list-card{
+        margin: 0 10px;
+        text-align: center;
+    }
+    .list-card img{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+    .list-card:hover{
+        background: none;
+        transform: none;
+    }
+    .list-card:hover img{
+        transition: none;
+        transform: none;
+
+    }
+    .list-name{
+        margin: 5px 0;
+        color: coral;
+        width: max-content;
+        font-size: 16px;
+    }
+    #food-items{
+        padding: 5px 10px;
+    }
+    .mobile-footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 15px;
+        background: white;
+        border-top: 1px solid rgb(129, 129, 129);
+
+    }
+    .mobile-footer a{
+        color: indianred;
+        text-decoration: none;
+        font-size: 20px;
+        position: sticky;
+        bottom: 0;
+
+    }
+    #category-name{
+        font-size: 25px;
+    }
+    #item-card{
+        width: 150px;
+        height: 210px;
+        
+    }
+    #item-card img{
+        width: 100px;
+        height: 100px;
+        margin-bottom: 5px;
+    }
+    #item-card:hover img{
+        transform: none;
+    }
+    #item-name,#item-price{
+        font-size: 15px;
+        margin: 0;
+    }
+    .list-card{
+        flex-direction: column;
+        background: white;
+        font-weight: 600;
+    }
+    #cart-page{
+        margin: 3px 0;
+        padding: 10px 5px;
+        padding-bottom: 30px;
+        border-top: 1px solid rgb(219,219,219);
+    }
+    #cart-page table thead td{
+        font-size: 20px;
+    }
+    #cart-page table tbody td{
+        font-size: 18px;
+    }
+    #cart-page table tbody img{
+        width: 60px;
+        height: 60px;
+    }
+    #cart-title{
+        font-size: 25px;
+        display: inline-block;
+    }
+    #m-total-amount{
+        display: inline-block;
+        color: lightcoral;
+        padding: 5px 10px;
+        margin: 0;
+        border: 1px solid lightcoral;
+        float: right;
+    }
+    .cart-btn{
+        font-size: 14px;
+        background: lightcoral;
+        padding: 8px 15px;
+        margin: auto;
+    }
+    .btn-box{
+        text-align: center;
+    }
+    #biryani{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width : 400px)
+{
+    #item-card{
+        height: 200px;
+        width: 140px;
+    }
+    #food-items{
+        padding: 0;
+    }
+}
