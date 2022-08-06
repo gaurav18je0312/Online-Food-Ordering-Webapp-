@@ -3,7 +3,7 @@ const foodItem= [
     id: 1,
     name: 'Ambur Biryani',
     category : 'biryani',
-    rating : 4.3,
+    rating : 4.2,
     price: 130,
     img: 'images/biryani/Ambur-Chicken-Biryani.jpg',
     quantity: 1
